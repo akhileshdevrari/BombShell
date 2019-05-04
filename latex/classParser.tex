@@ -1,0 +1,84 @@
+\hypertarget{classParser}{}\section{Parser Class Reference}
+\label{classParser}\index{Parser@{Parser}}
+
+
+\hyperlink{classParser}{Parser}.  
+
+
+
+
+{\ttfamily \#include $<$parser.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParser_aab24c7b1f845c389cf8a5ce4a33113bf}{Parser} (string text)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+string \hyperlink{classParser_a8c9e6b23d2c4ab80652dc7f65f44404e}{get\+Next\+Token} ()
+\begin{DoxyCompactList}\small\item\em Given next token in tokens\mbox{[}\mbox{]}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classParser_ad941a297e9f6abb39271090806a6be33}{parse} ()\hypertarget{classParser_ad941a297e9f6abb39271090806a6be33}{}\label{classParser_ad941a297e9f6abb39271090806a6be33}
+
+\begin{DoxyCompactList}\small\item\em parse the input\+Text and setup tokens\mbox{[}\mbox{]} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classParser_ad9da0ac80b32a9c9441bf70ee7ae4868}{input\+Text}\hypertarget{classParser_ad9da0ac80b32a9c9441bf70ee7ae4868}{}\label{classParser_ad9da0ac80b32a9c9441bf70ee7ae4868}
+
+\begin{DoxyCompactList}\small\item\em text entered by user on terminal \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classParser_afbbe71165f913e754f0dc9200b6ef3c1}{tokens}\hypertarget{classParser_afbbe71165f913e754f0dc9200b6ef3c1}{}\label{classParser_afbbe71165f913e754f0dc9200b6ef3c1}
+
+\begin{DoxyCompactList}\small\item\em vector of string tokens \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classParser}{Parser}. 
+
+An object of this class will be created in \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main()} and will be used to parse the user input 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Parser@{Parser}!Parser@{Parser}}
+\index{Parser@{Parser}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{Parser(string text)}{Parser(string text)}}]{\setlength{\rightskip}{0pt plus 5cm}Parser\+::\+Parser (
+\begin{DoxyParamCaption}
+\item[{string}]{text}
+\end{DoxyParamCaption}
+)}\hypertarget{classParser_aab24c7b1f845c389cf8a5ce4a33113bf}{}\label{classParser_aab24c7b1f845c389cf8a5ce4a33113bf}
+
+
+Constructor. 
+
+Takes a string as argument, sets it as this.\+input\+Text and then call this.\+parse() 
+\begin{DoxyParams}{Parameters}
+{\em text} & input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Parser@{Parser}!get\+Next\+Token@{get\+Next\+Token}}
+\index{get\+Next\+Token@{get\+Next\+Token}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{get\+Next\+Token()}{getNextToken()}}]{\setlength{\rightskip}{0pt plus 5cm}string Parser\+::get\+Next\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classParser_a8c9e6b23d2c4ab80652dc7f65f44404e}{}\label{classParser_a8c9e6b23d2c4ab80652dc7f65f44404e}
+
+
+Given next token in tokens\mbox{[}\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+a string for next token from tokens\mbox{[}\mbox{]} 
+
+suitable E\+OF symbol if no more tokens are left 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/parser.\+h\end{DoxyCompactItemize}

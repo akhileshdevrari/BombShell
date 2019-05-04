@@ -1,0 +1,103 @@
+\hypertarget{classBuiltin}{}\section{Builtin Class Reference}
+\label{classBuiltin}\index{Builtin@{Builtin}}
+
+
+\hyperlink{classBuiltin}{Builtin}.  
+
+
+
+
+{\ttfamily \#include $<$builtin.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classBuiltin_a3951c3a66a93e3ec0c6ddd6f772725f5}{current\+Dir} ()
+\begin{DoxyCompactList}\small\item\em Returns current working directory. \end{DoxyCompactList}\item 
+void \hyperlink{classBuiltin_a63131813bfc980e1058832b1cb295779}{cd} (string dir)
+\begin{DoxyCompactList}\small\item\em Enter a given directory. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \hyperlink{classBuiltin_acd88fa7ff5d8c910c90575401260bd32}{show\+History} ()
+\begin{DoxyCompactList}\small\item\em Show history of commands entered by user since program started. \end{DoxyCompactList}\item 
+void \hyperlink{classBuiltin_a950aa984f051c4e32a7ab9a37b146453}{add\+To\+History} (string command)
+\begin{DoxyCompactList}\small\item\em Add current command to history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classBuiltin}{Builtin}. 
+
+An object of this class will be created in \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main()} and will be used for keeping track of current working directory and executing builtin functions
+
+Use a private stack to implement \hyperlink{classBuiltin_a63131813bfc980e1058832b1cb295779}{cd()} and history() 
+
+\subsection{Member Function Documentation}
+\index{Builtin@{Builtin}!add\+To\+History@{add\+To\+History}}
+\index{add\+To\+History@{add\+To\+History}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{add\+To\+History(string command)}{addToHistory(string command)}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::add\+To\+History (
+\begin{DoxyParamCaption}
+\item[{string}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_a950aa984f051c4e32a7ab9a37b146453}{}\label{classBuiltin_a950aa984f051c4e32a7ab9a37b146453}
+
+
+Add current command to history. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & a string which was entered by user and should be stored in history if it is non-\/empty \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!cd@{cd}}
+\index{cd@{cd}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{cd(string dir)}{cd(string dir)}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::cd (
+\begin{DoxyParamCaption}
+\item[{string}]{dir}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_a63131813bfc980e1058832b1cb295779}{}\label{classBuiltin_a63131813bfc980e1058832b1cb295779}
+
+
+Enter a given directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & name of directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!current\+Dir@{current\+Dir}}
+\index{current\+Dir@{current\+Dir}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{current\+Dir()}{currentDir()}}]{\setlength{\rightskip}{0pt plus 5cm}string Builtin\+::current\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_a3951c3a66a93e3ec0c6ddd6f772725f5}{}\label{classBuiltin_a3951c3a66a93e3ec0c6ddd6f772725f5}
+
+
+Returns current working directory. 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!show\+History@{show\+History}}
+\index{show\+History@{show\+History}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{show\+History()}{showHistory()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Builtin\+::show\+History (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_acd88fa7ff5d8c910c90575401260bd32}{}\label{classBuiltin_acd88fa7ff5d8c910c90575401260bd32}
+
+
+Show history of commands entered by user since program started. 
+
+\begin{DoxyReturn}{Returns}
+A vector of strings containing history in L\+I\+FO order 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/builtin.\+h\end{DoxyCompactItemize}
