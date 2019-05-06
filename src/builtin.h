@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <unistd.h>
+#include <stdio.h>
+#include <limits.h>
 using namespace std;
 
 //!  Builtin
