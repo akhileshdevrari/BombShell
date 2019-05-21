@@ -1,0 +1,146 @@
+\hypertarget{classLexer}{}\section{Lexer Class Reference}
+\label{classLexer}\index{Lexer@{Lexer}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLexer_aacbf403ef967d64e32d3d22848791184}{Lexer} (std\+::string \+\_\+text)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classLexer_a648cdfba0f233781e0a4388e80791e83}{skip\+\_\+whitespaces} ()
+\begin{DoxyCompactList}\small\item\em Ignores whitespaces and put pos pointer to a non-\/whitespace character. \end{DoxyCompactList}\item 
+void \hyperlink{classLexer_a3486f1d70609a2312374502e0eb73f3a}{advance\+\_\+pos} ()
+\begin{DoxyCompactList}\small\item\em Advances position of pos pointer in text, and check if E\+OF reached. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classLexer_af1457c31191cd094666ef97a5308614c}{get\+\_\+word} ()
+\begin{DoxyCompactList}\small\item\em returns a word starting at pos, and shift pos to next pointer \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classLexer_adb52f7342b8fd8ebd4405847b7dccccf}{get\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em returns a string which is present under double quotes \end{DoxyCompactList}\item 
+\hyperlink{classToken}{Token} \hyperlink{classLexer_a86fa075d74f569a9632f7810afcc6e26}{get\+\_\+next\+\_\+token} ()
+\begin{DoxyCompactList}\small\item\em Most important function in Lexical analyzer. This method breaks the text into tokens, and returns a token starting at pos. \end{DoxyCompactList}\item 
+char \hyperlink{classLexer_a5a1759fc923de89d2cdb709faa0ed3a1}{peek} ()
+\begin{DoxyCompactList}\small\item\em returns next character in input text \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{classLexer_add432298eee4fc0e1acb31efb319f081}{text}\hypertarget{classLexer_add432298eee4fc0e1acb31efb319f081}{}\label{classLexer_add432298eee4fc0e1acb31efb319f081}
+
+\begin{DoxyCompactList}\small\item\em input text entered by user \end{DoxyCompactList}\item 
+char \hyperlink{classLexer_a9441556481291710403f1286910eced2}{current\+\_\+char}\hypertarget{classLexer_a9441556481291710403f1286910eced2}{}\label{classLexer_a9441556481291710403f1286910eced2}
+
+\begin{DoxyCompactList}\small\item\em current char at text\mbox{[}pos\mbox{]} \end{DoxyCompactList}\item 
+int \hyperlink{classLexer_aecee5b337104d58494ea6708c3b5df15}{pos}\hypertarget{classLexer_aecee5b337104d58494ea6708c3b5df15}{}\label{classLexer_aecee5b337104d58494ea6708c3b5df15}
+
+\begin{DoxyCompactList}\small\item\em current index of text to be tokenized \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Lexer@{Lexer}!Lexer@{Lexer}}
+\index{Lexer@{Lexer}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{Lexer(std\+::string \+\_\+text)}{Lexer(std::string _text)}}]{\setlength{\rightskip}{0pt plus 5cm}Lexer\+::\+Lexer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{\+\_\+text}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_aacbf403ef967d64e32d3d22848791184}{}\label{classLexer_aacbf403ef967d64e32d3d22848791184}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+value} & input string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{Lexer@{Lexer}!advance\+\_\+pos@{advance\+\_\+pos}}
+\index{advance\+\_\+pos@{advance\+\_\+pos}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{advance\+\_\+pos()}{advance_pos()}}]{\setlength{\rightskip}{0pt plus 5cm}void Lexer\+::advance\+\_\+pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_a3486f1d70609a2312374502e0eb73f3a}{}\label{classLexer_a3486f1d70609a2312374502e0eb73f3a}
+
+
+Advances position of pos pointer in text, and check if E\+OF reached. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Lexer@{Lexer}!get\+\_\+next\+\_\+token@{get\+\_\+next\+\_\+token}}
+\index{get\+\_\+next\+\_\+token@{get\+\_\+next\+\_\+token}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{get\+\_\+next\+\_\+token()}{get_next_token()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Token} Lexer\+::get\+\_\+next\+\_\+token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_a86fa075d74f569a9632f7810afcc6e26}{}\label{classLexer_a86fa075d74f569a9632f7810afcc6e26}
+
+
+Most important function in Lexical analyzer. This method breaks the text into tokens, and returns a token starting at pos. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Lexer@{Lexer}!get\+\_\+string@{get\+\_\+string}}
+\index{get\+\_\+string@{get\+\_\+string}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{get\+\_\+string()}{get_string()}}]{\setlength{\rightskip}{0pt plus 5cm}string Lexer\+::get\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_adb52f7342b8fd8ebd4405847b7dccccf}{}\label{classLexer_adb52f7342b8fd8ebd4405847b7dccccf}
+
+
+returns a string which is present under double quotes 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Lexer@{Lexer}!get\+\_\+word@{get\+\_\+word}}
+\index{get\+\_\+word@{get\+\_\+word}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{get\+\_\+word()}{get_word()}}]{\setlength{\rightskip}{0pt plus 5cm}string Lexer\+::get\+\_\+word (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_af1457c31191cd094666ef97a5308614c}{}\label{classLexer_af1457c31191cd094666ef97a5308614c}
+
+
+returns a word starting at pos, and shift pos to next pointer 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Lexer@{Lexer}!peek@{peek}}
+\index{peek@{peek}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{peek()}{peek()}}]{\setlength{\rightskip}{0pt plus 5cm}char Lexer\+::peek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_a5a1759fc923de89d2cdb709faa0ed3a1}{}\label{classLexer_a5a1759fc923de89d2cdb709faa0ed3a1}
+
+
+returns next character in input text 
+
+\begin{DoxyReturn}{Returns}
+character after current\+\_\+pos 
+\end{DoxyReturn}
+\index{Lexer@{Lexer}!skip\+\_\+whitespaces@{skip\+\_\+whitespaces}}
+\index{skip\+\_\+whitespaces@{skip\+\_\+whitespaces}!Lexer@{Lexer}}
+\subsubsection[{\texorpdfstring{skip\+\_\+whitespaces()}{skip_whitespaces()}}]{\setlength{\rightskip}{0pt plus 5cm}void Lexer\+::skip\+\_\+whitespaces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLexer_a648cdfba0f233781e0a4388e80791e83}{}\label{classLexer_a648cdfba0f233781e0a4388e80791e83}
+
+
+Ignores whitespaces and put pos pointer to a non-\/whitespace character. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/lexer.\+h\item 
+src/lexer.\+cpp\end{DoxyCompactItemize}

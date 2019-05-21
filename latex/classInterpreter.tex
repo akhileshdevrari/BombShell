@@ -1,0 +1,85 @@
+\hypertarget{classInterpreter}{}\section{Interpreter Class Reference}
+\label{classInterpreter}\index{Interpreter@{Interpreter}}
+
+
+\hyperlink{classParser}{Parser}.  
+
+
+
+
+{\ttfamily \#include $<$interpreter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInterpreter_ac3c23e0850edbfb1511dad83f954f311}{Interpreter} (vector$<$ vector$<$ string $>$ $>$ \&)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classInterpreter_ad94c189af098f0c93e16d7b88cc56e5e}{interpret} ()
+\begin{DoxyCompactList}\small\item\em Interpret the command\+\_\+table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classInterpreter_a09554dcc38764a8d179a9b1257c071fd}{spawn\+\_\+proc} (int, int, vector$<$ string $>$ \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ vector$<$ string $>$ $>$ \hyperlink{classInterpreter_aa63ca505e3d12d7b52651f3cd0845871}{command\+\_\+table}\hypertarget{classInterpreter_aa63ca505e3d12d7b52651f3cd0845871}{}\label{classInterpreter_aa63ca505e3d12d7b52651f3cd0845871}
+
+\begin{DoxyCompactList}\small\item\em Command table containing commands entered by user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classParser}{Parser}. 
+
+An object of this class will be created in \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main()} and will be used to intepret command\+\_\+table 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Interpreter@{Interpreter}!Interpreter@{Interpreter}}
+\index{Interpreter@{Interpreter}!Interpreter@{Interpreter}}
+\subsubsection[{\texorpdfstring{Interpreter(vector$<$ vector$<$ string $>$ $>$ \&)}{Interpreter(vector< vector< string > > &)}}]{\setlength{\rightskip}{0pt plus 5cm}Interpreter\+::\+Interpreter (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ string $>$ $>$ \&}]{cmd\+\_\+t}
+\end{DoxyParamCaption}
+)}\hypertarget{classInterpreter_ac3c23e0850edbfb1511dad83f954f311}{}\label{classInterpreter_ac3c23e0850edbfb1511dad83f954f311}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command\+\_\+table} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Interpreter@{Interpreter}!interpret@{interpret}}
+\index{interpret@{interpret}!Interpreter@{Interpreter}}
+\subsubsection[{\texorpdfstring{interpret()}{interpret()}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpreter\+::interpret (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classInterpreter_ad94c189af098f0c93e16d7b88cc56e5e}{}\label{classInterpreter_ad94c189af098f0c93e16d7b88cc56e5e}
+
+
+Interpret the command\+\_\+table. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Interpreter@{Interpreter}!spawn\+\_\+proc@{spawn\+\_\+proc}}
+\index{spawn\+\_\+proc@{spawn\+\_\+proc}!Interpreter@{Interpreter}}
+\subsubsection[{\texorpdfstring{spawn\+\_\+proc(int, int, vector$<$ string $>$ \&)}{spawn_proc(int, int, vector< string > &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Interpreter\+::spawn\+\_\+proc (
+\begin{DoxyParamCaption}
+\item[{int}]{in, }
+\item[{int}]{out, }
+\item[{vector$<$ string $>$ \&}]{command}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classInterpreter_a09554dcc38764a8d179a9b1257c071fd}{}\label{classInterpreter_a09554dcc38764a8d179a9b1257c071fd}
+Function helpful for implementing piping Source\+: \href{https://stackoverflow.com/questions/8082932/connecting-n-commands-with-pipes-in-a-shell}{\tt https\+://stackoverflow.\+com/questions/8082932/connecting-\/n-\/commands-\/with-\/pipes-\/in-\/a-\/shell} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/interpreter.\+h\item 
+src/interpreter.\+cpp\end{DoxyCompactItemize}

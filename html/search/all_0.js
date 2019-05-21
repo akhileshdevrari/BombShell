@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addtohistory',['addToHistory',['../classBuiltin.html#a950aa984f051c4e32a7ab9a37b146453',1,'Builtin']]]
+  ['_5fexit',['_exit',['../classBuiltin.html#a0028451c3a801c661064cba5fd8ae247',1,'Builtin']]]
 ];

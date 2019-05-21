@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['showhistory',['showHistory',['../classBuiltin.html#acd88fa7ff5d8c910c90575401260bd32',1,'Builtin']]]
+  ['interpret',['interpret',['../classInterpreter.html#ad94c189af098f0c93e16d7b88cc56e5e',1,'Interpreter']]],
+  ['interpreter',['Interpreter',['../classInterpreter.html',1,'Interpreter'],['../classInterpreter.html#ac3c23e0850edbfb1511dad83f954f311',1,'Interpreter::Interpreter()']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tokens',['tokens',['../classParser.html#afbbe71165f913e754f0dc9200b6ef3c1',1,'Parser']]]
+  ['lexer',['Lexer',['../classLexer.html',1,'Lexer'],['../classLexer.html#aacbf403ef967d64e32d3d22848791184',1,'Lexer::Lexer()']]]
 ];

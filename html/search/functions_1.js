@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['cd',['cd',['../classBuiltin.html#a63131813bfc980e1058832b1cb295779',1,'Builtin']]],
-  ['currentdir',['currentDir',['../classBuiltin.html#a3951c3a66a93e3ec0c6ddd6f772725f5',1,'Builtin']]]
+  ['addhistory',['addHistory',['../classBuiltin.html#a720ba0abdcfd5824472d16c867b873a8',1,'Builtin']]],
+  ['advance_5fpos',['advance_pos',['../classLexer.html#a3486f1d70609a2312374502e0eb73f3a',1,'Lexer']]]
 ];

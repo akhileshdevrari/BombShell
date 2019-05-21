@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tokens',['tokens',['../classParser.html#a897b28808c58aad0c4c86d593d57b87c',1,'Parser']]]
+  ['lexer',['Lexer',['../classLexer.html#aacbf403ef967d64e32d3d22848791184',1,'Lexer']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tokens',['tokens',['../classParser.html#afbbe71165f913e754f0dc9200b6ef3c1',1,'Parser']]]
+  ['history',['history',['../classBuiltin.html#a2ab51516980cbfa5c9b6fafd61c8800e',1,'Builtin']]]
 ];

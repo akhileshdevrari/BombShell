@@ -12,38 +12,64 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-string \hyperlink{classBuiltin_a3951c3a66a93e3ec0c6ddd6f772725f5}{current\+Dir} ()
-\begin{DoxyCompactList}\small\item\em Returns current working directory. \end{DoxyCompactList}\item 
+void \hyperlink{classBuiltin_aab885e7b22241d679f4d870242295ef1}{print\+Cur\+Dir} ()
+\begin{DoxyCompactList}\small\item\em Print current working directory. \end{DoxyCompactList}\item 
 void \hyperlink{classBuiltin_a63131813bfc980e1058832b1cb295779}{cd} (string dir)
 \begin{DoxyCompactList}\small\item\em Enter a given directory. \end{DoxyCompactList}\item 
-vector$<$ string $>$ \hyperlink{classBuiltin_acd88fa7ff5d8c910c90575401260bd32}{show\+History} ()
+void \hyperlink{classBuiltin_ae8fcec7d5f95ac96520faf41b2636d97}{show\+History} ()
 \begin{DoxyCompactList}\small\item\em Show history of commands entered by user since program started. \end{DoxyCompactList}\item 
-void \hyperlink{classBuiltin_a950aa984f051c4e32a7ab9a37b146453}{add\+To\+History} (string command)
-\begin{DoxyCompactList}\small\item\em Add current command to history. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{classBuiltin_a720ba0abdcfd5824472d16c867b873a8}{add\+History} (string cmd)
+\begin{DoxyCompactList}\small\item\em Add current command to history. \end{DoxyCompactList}\item 
+string \hyperlink{classBuiltin_a4b0094c62d0c42563e402f16a1a0c2b0}{receive\+Input} ()
+\begin{DoxyCompactList}\small\item\em receive input from user \end{DoxyCompactList}\item 
+void \hyperlink{classBuiltin_a0028451c3a801c661064cba5fd8ae247}{\+\_\+exit} ()
+\begin{DoxyCompactList}\small\item\em exit program \end{DoxyCompactList}\item 
+int \hyperlink{classBuiltin_aa4e9f7f085e04a12fd47f4f1acfe8e4a}{check\+Builtin} (vector$<$ vector$<$ string $>$ $>$ \&command\+\_\+table)
+\begin{DoxyCompactList}\small\item\em check if command entered is a builtin function \end{DoxyCompactList}\item 
+void \hyperlink{classBuiltin_a24eec3cbc9da4b8886dd8cec8569c417}{print\+Bomb} ()
+\begin{DoxyCompactList}\small\item\em print a giant bomb on screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ string $>$ \hyperlink{classBuiltin_a2ab51516980cbfa5c9b6fafd61c8800e}{history}\hypertarget{classBuiltin_a2ab51516980cbfa5c9b6fafd61c8800e}{}\label{classBuiltin_a2ab51516980cbfa5c9b6fafd61c8800e}
+
+\begin{DoxyCompactList}\small\item\em vector containing history of commands entered by user in this session \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \hyperlink{classBuiltin}{Builtin}. 
 
-An object of this class will be created in \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main()} and will be used for keeping track of current working directory and executing builtin functions
-
-Use a private stack to implement \hyperlink{classBuiltin_a63131813bfc980e1058832b1cb295779}{cd()} and history() 
+An object of this class will be created in \hyperlink{main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main()} and will be used for keeping track of current working directory and executing builtin functions 
 
 \subsection{Member Function Documentation}
-\index{Builtin@{Builtin}!add\+To\+History@{add\+To\+History}}
-\index{add\+To\+History@{add\+To\+History}!Builtin@{Builtin}}
-\subsubsection[{\texorpdfstring{add\+To\+History(string command)}{addToHistory(string command)}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::add\+To\+History (
+\index{Builtin@{Builtin}!\+\_\+exit@{\+\_\+exit}}
+\index{\+\_\+exit@{\+\_\+exit}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{\+\_\+exit()}{_exit()}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::\+\_\+exit (
 \begin{DoxyParamCaption}
-\item[{string}]{command}
+{}
 \end{DoxyParamCaption}
-)}\hypertarget{classBuiltin_a950aa984f051c4e32a7ab9a37b146453}{}\label{classBuiltin_a950aa984f051c4e32a7ab9a37b146453}
+)}\hypertarget{classBuiltin_a0028451c3a801c661064cba5fd8ae247}{}\label{classBuiltin_a0028451c3a801c661064cba5fd8ae247}
+
+
+exit program 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!add\+History@{add\+History}}
+\index{add\+History@{add\+History}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{add\+History(string cmd)}{addHistory(string cmd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::add\+History (
+\begin{DoxyParamCaption}
+\item[{string}]{cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_a720ba0abdcfd5824472d16c867b873a8}{}\label{classBuiltin_a720ba0abdcfd5824472d16c867b873a8}
 
 
 Add current command to history. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em command} & a string which was entered by user and should be stored in history if it is non-\/empty \\
+{\em cmd} & a string which was entered by user and should be stored in history if it is non-\/empty \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -68,27 +94,71 @@ Enter a given directory.
 \begin{DoxyReturn}{Returns}
 void 
 \end{DoxyReturn}
-\index{Builtin@{Builtin}!current\+Dir@{current\+Dir}}
-\index{current\+Dir@{current\+Dir}!Builtin@{Builtin}}
-\subsubsection[{\texorpdfstring{current\+Dir()}{currentDir()}}]{\setlength{\rightskip}{0pt plus 5cm}string Builtin\+::current\+Dir (
+\index{Builtin@{Builtin}!check\+Builtin@{check\+Builtin}}
+\index{check\+Builtin@{check\+Builtin}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{check\+Builtin(vector$<$ vector$<$ string $>$ $>$ \&command\+\_\+table)}{checkBuiltin(vector< vector< string > > &command_table)}}]{\setlength{\rightskip}{0pt plus 5cm}int Builtin\+::check\+Builtin (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ string $>$ $>$ \&}]{command\+\_\+table}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_aa4e9f7f085e04a12fd47f4f1acfe8e4a}{}\label{classBuiltin_aa4e9f7f085e04a12fd47f4f1acfe8e4a}
+
+
+check if command entered is a builtin function 
+
+\begin{DoxyReturn}{Returns}
+1 command is builtin 
+
+2 command is not builtin 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!print\+Bomb@{print\+Bomb}}
+\index{print\+Bomb@{print\+Bomb}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{print\+Bomb()}{printBomb()}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::print\+Bomb (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classBuiltin_a3951c3a66a93e3ec0c6ddd6f772725f5}{}\label{classBuiltin_a3951c3a66a93e3ec0c6ddd6f772725f5}
+)}\hypertarget{classBuiltin_a24eec3cbc9da4b8886dd8cec8569c417}{}\label{classBuiltin_a24eec3cbc9da4b8886dd8cec8569c417}
 
 
-Returns current working directory. 
+print a giant bomb on screen 
 
 \begin{DoxyReturn}{Returns}
-string 
+void 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!print\+Cur\+Dir@{print\+Cur\+Dir}}
+\index{print\+Cur\+Dir@{print\+Cur\+Dir}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{print\+Cur\+Dir()}{printCurDir()}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::print\+Cur\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_aab885e7b22241d679f4d870242295ef1}{}\label{classBuiltin_aab885e7b22241d679f4d870242295ef1}
+
+
+Print current working directory. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\index{Builtin@{Builtin}!receive\+Input@{receive\+Input}}
+\index{receive\+Input@{receive\+Input}!Builtin@{Builtin}}
+\subsubsection[{\texorpdfstring{receive\+Input()}{receiveInput()}}]{\setlength{\rightskip}{0pt plus 5cm}string Builtin\+::receive\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classBuiltin_a4b0094c62d0c42563e402f16a1a0c2b0}{}\label{classBuiltin_a4b0094c62d0c42563e402f16a1a0c2b0}
+
+
+receive input from user 
+
+\begin{DoxyReturn}{Returns}
+string entered by user 
 \end{DoxyReturn}
 \index{Builtin@{Builtin}!show\+History@{show\+History}}
 \index{show\+History@{show\+History}!Builtin@{Builtin}}
-\subsubsection[{\texorpdfstring{show\+History()}{showHistory()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$ Builtin\+::show\+History (
+\subsubsection[{\texorpdfstring{show\+History()}{showHistory()}}]{\setlength{\rightskip}{0pt plus 5cm}void Builtin\+::show\+History (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)}\hypertarget{classBuiltin_acd88fa7ff5d8c910c90575401260bd32}{}\label{classBuiltin_acd88fa7ff5d8c910c90575401260bd32}
+)}\hypertarget{classBuiltin_ae8fcec7d5f95ac96520faf41b2636d97}{}\label{classBuiltin_ae8fcec7d5f95ac96520faf41b2636d97}
 
 
 Show history of commands entered by user since program started. 
@@ -98,6 +168,7 @@ A vector of strings containing history in L\+I\+FO order
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-src/builtin.\+h\end{DoxyCompactItemize}
+src/builtin.\+h\item 
+src/builtin.\+cpp\end{DoxyCompactItemize}

@@ -84,7 +84,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classParser-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -96,56 +95,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classParser.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="parser_8h_source.html">parser.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Parser:</div>
+<div class="dyncontent">
+<div class="center"><img src="classParser__coll__graph.png" border="0" usemap="#Parser_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aab24c7b1f845c389cf8a5ce4a33113bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#aab24c7b1f845c389cf8a5ce4a33113bf">Parser</a> (string text)</td></tr>
-<tr class="memdesc:aab24c7b1f845c389cf8a5ce4a33113bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aab24c7b1f845c389cf8a5ce4a33113bf">More...</a><br /></td></tr>
-<tr class="separator:aab24c7b1f845c389cf8a5ce4a33113bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c9e6b23d2c4ab80652dc7f65f44404e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a8c9e6b23d2c4ab80652dc7f65f44404e">getNextToken</a> ()</td></tr>
-<tr class="memdesc:a8c9e6b23d2c4ab80652dc7f65f44404e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given next token in tokens[].  <a href="#a8c9e6b23d2c4ab80652dc7f65f44404e">More...</a><br /></td></tr>
-<tr class="separator:a8c9e6b23d2c4ab80652dc7f65f44404e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:ad941a297e9f6abb39271090806a6be33"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad941a297e9f6abb39271090806a6be33"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#ad941a297e9f6abb39271090806a6be33">parse</a> ()</td></tr>
-<tr class="memdesc:ad941a297e9f6abb39271090806a6be33"><td class="mdescLeft">&#160;</td><td class="mdescRight">parse the inputText and setup tokens[] <br /></td></tr>
-<tr class="separator:ad941a297e9f6abb39271090806a6be33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289221b33b089e362efbbbcbe04a7742"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a289221b33b089e362efbbbcbe04a7742">Parser</a> (<a class="el" href="classLexer.html">Lexer</a> _lexer)</td></tr>
+<tr class="memdesc:a289221b33b089e362efbbbcbe04a7742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a289221b33b089e362efbbbcbe04a7742">More...</a><br /></td></tr>
+<tr class="separator:a289221b33b089e362efbbbcbe04a7742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55130c5736af44f0f85d9ff3bcdb4540"><td class="memItemLeft" align="right" valign="top">vector&lt; vector&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#a55130c5736af44f0f85d9ff3bcdb4540">parse</a> ()</td></tr>
+<tr class="memdesc:a55130c5736af44f0f85d9ff3bcdb4540"><td class="mdescLeft">&#160;</td><td class="mdescRight">parses the tokens sent by lexer  <a href="#a55130c5736af44f0f85d9ff3bcdb4540">More...</a><br /></td></tr>
+<tr class="separator:a55130c5736af44f0f85d9ff3bcdb4540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e737791bb884b3111e408a1235bf83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#ab1e737791bb884b3111e408a1235bf83">error</a> (<a class="el" href="classToken.html">Token</a> token)</td></tr>
+<tr class="memdesc:ab1e737791bb884b3111e408a1235bf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">shows if an error occurs whiling parsing a token  <a href="#ab1e737791bb884b3111e408a1235bf83">More...</a><br /></td></tr>
+<tr class="separator:ab1e737791bb884b3111e408a1235bf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ad9da0ac80b32a9c9441bf70ee7ae4868"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad9da0ac80b32a9c9441bf70ee7ae4868"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#ad9da0ac80b32a9c9441bf70ee7ae4868">inputText</a></td></tr>
-<tr class="memdesc:ad9da0ac80b32a9c9441bf70ee7ae4868"><td class="mdescLeft">&#160;</td><td class="mdescRight">text entered by user on terminal <br /></td></tr>
-<tr class="separator:ad9da0ac80b32a9c9441bf70ee7ae4868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbbe71165f913e754f0dc9200b6ef3c1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbbe71165f913e754f0dc9200b6ef3c1"></a>
-vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classParser.html#afbbe71165f913e754f0dc9200b6ef3c1">tokens</a></td></tr>
-<tr class="memdesc:afbbe71165f913e754f0dc9200b6ef3c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">vector of string tokens <br /></td></tr>
-<tr class="separator:afbbe71165f913e754f0dc9200b6ef3c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad05518621c5340d31f2b986a6467584"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aad05518621c5340d31f2b986a6467584"></a>
+<a class="el" href="classLexer.html">Lexer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>lexer</b></td></tr>
+<tr class="separator:aad05518621c5340d31f2b986a6467584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21ea3fca7b244f80d61baa44d145d3c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ea3fca7b244f80d61baa44d145d3c6"></a>
+<a class="el" href="classToken.html">Token</a>&#160;</td><td class="memItemRight" valign="bottom"><b>current_token</b></td></tr>
+<tr class="separator:a21ea3fca7b244f80d61baa44d145d3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8668c518b4322510223fe4ddc01400a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8668c518b4322510223fe4ddc01400a6"></a>
+vector&lt; vector&lt; string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>command_table</b></td></tr>
+<tr class="separator:a8668c518b4322510223fe4ddc01400a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classParser.html" title="Parser. ">Parser</a>. </p>
 <p>An object of this class will be created in <a class="el" href="main_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">main()</a> and will be used to parse the user input </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aab24c7b1f845c389cf8a5ce4a33113bf"></a>
+<a class="anchor" id="a289221b33b089e362efbbbcbe04a7742"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">Parser::Parser </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>text</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classLexer.html">Lexer</a>&#160;</td>
+          <td class="paramname"><em>_lexer</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>Takes a string as argument, sets it as this.inputText and then call this.parse() </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">text</td><td>input string </td></tr>
+    <tr><td class="paramname">lexer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ab1e737791bb884b3111e408a1235bf83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Parser::error </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classToken.html">Token</a>&#160;</td>
+          <td class="paramname"><em>token</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>shows if an error occurs whiling parsing a token </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">token</td><td>parsing which causes error </td></tr>
   </table>
   </dd>
 </dl>
@@ -153,13 +180,12 @@ vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cla
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8c9e6b23d2c4ab80652dc7f65f44404e"></a>
+<a class="anchor" id="a55130c5736af44f0f85d9ff3bcdb4540"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">string Parser::getNextToken </td>
+          <td class="memname">vector&lt; vector&lt; string &gt; &gt; Parser::parse </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -167,15 +193,14 @@ vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a cla
       </table>
 </div><div class="memdoc">
 
-<p>Given next token in tokens[]. </p>
-<dl class="section return"><dt>Returns</dt><dd>a string for next token from tokens[] </dd>
-<dd>
-suitable EOF symbol if no more tokens are left </dd></dl>
+<p>parses the tokens sent by lexer </p>
+<dl class="section return"><dt>Returns</dt><dd>command table generated after parsing </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/<a class="el" href="parser_8h_source.html">parser.h</a></li>
+<li>src/parser.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,40 +1,46 @@
+#ifndef PARSER_H
+#define PARSER_H
+
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include "lexer.h"
+
 using namespace std;
 
 //!  Parser
 /*!
   An object of this class will be created in main() and will be used to parse the user input
 */
-class Parser
-{
+
+class Parser{
 private:
-	//! text entered by user on terminal
-	string inputText;
-
-	//! vector of string tokens
-	vector<string> tokens;
-
-
-	//! parse the inputText and setup tokens[]
-	void parse();
-
+	Lexer lexer;
+	Token current_token;
+	vector<vector<string> > command_table;
 public:
-	//! Constructor.
-    /*!
-    	Takes a string as argument, sets it as this.inputText and then call this.parse()
-    	\param text input string
-    	\return void
-    */
-	Parser(string text);
-	~Parser();
-
-
-	//! Given next token in tokens[]
+	Parser(){};
+	//! Constructor
 	/*!
-	* \return a string for next token from tokens[]
-	* \return suitable EOF symbol if no more tokens are left
+	* \param lexer
 	*/
-	string getNextToken();
+	Parser(Lexer _lexer);
+	~Parser(){};
+
+	//! parses the tokens sent by lexer
+	/*!
+	* \return command table generated after parsing
+	*/
+	vector<vector<string> > parse();
+
+	//! shows if an error occurs whiling parsing a token
+	/*!
+	* \param token parsing which causes error
+	* \return void
+	*/
+	void error(Token token);
+	
 };
+
+#endif

@@ -1,2 +1,2 @@
-BombShell: src/main.cpp src/parser.h src/builtin.h
-	g++ -o BombShell src/main.cpp src/parser.h src/builtin.h
+BombShell: src/main.cpp src/parser.h src/builtin.h src/interpreter.h src/parser.cpp src/builtin.cpp src/interpreter.cpp src/lexer.h src/lexer.cpp
+	g++ -o BombShell src/main.cpp src/parser.h src/builtin.h src/interpreter.h src/parser.cpp src/builtin.cpp src/interpreter.cpp src/lexer.h src/lexer.cpp
